@@ -1,0 +1,17 @@
+<% @user.errors.full_messages.each do |msg| %>
+  <div class="alert">
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= form_with(model: @user, local: true) do %>
+  <div>
+    <%= label_tag(:email, t("login.email")) %>
+    <%= email_field_tag(:email, "", required: true) %>
+  </div>
+  <div>
+    <%= label_tag(:password, t("login.password")) %>
+    <%= password_field_tag(:password, "", required: true) %>
+  </div>
+  <%= submit_tag(t("login.register")) %>
+<% end %>

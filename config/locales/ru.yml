@@ -1,0 +1,9 @@
+ru:
+  login:
+    email: "Email"
+    password: "Пароль"
+    login: "Войти"
+    error: "Не верные пароль или email"
+    password_confirmation: "Подтвердите пароль"
+    register: "Зарегистрироваться"
+
