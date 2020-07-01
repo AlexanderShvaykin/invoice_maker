@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-3 mb-2">
+    <%= link_to t("orders.create"), organizations_path, class: "btn btn-primary"%>
+  </div>
+</div>
+
+<div class="list-group">
+  <% @orders.each do |order| %>
+    <li class="list-group-item list-group-item-action">
+      <%= link_to order.number, invoice_path(order) %>
+      <%= link_to t("orders.delete"), invoice_path(order), class: "float-right", method: :delete %>
+      <span class="float-right">/</span>
+      <%= link_to t("orders.download"), invoice_path(order, format: :pdf), class: "float-right" %>
+    </li>
+  <% end %>
+</div>

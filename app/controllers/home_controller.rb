@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    render plain: "Ok"
+    redirect_to invoices_path
   end
 end

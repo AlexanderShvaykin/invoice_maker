@@ -33,5 +33,15 @@ module UserOrders
     config.generators.system_tests = nil
     config.i18n.default_locale = :ru
     I18n.available_locales = [:en, :ru]
+
+
+    config.generators do |g|
+      g.stylesheets      false
+      g.helper           false
+      g.request_specs    false
+      g.controller_specs true
+      g.view_specs       false
+      g.skip_routes      true
+    end
   end
 end

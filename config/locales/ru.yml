@@ -6,4 +6,44 @@ ru:
     error: "Не верные пароль или email"
     password_confirmation: "Подтвердите пароль"
     register: "Зарегистрироваться"
+    logout: "Выйти"
+  orders:
+    index: "Счета"
+    create: "Создать счет"
+    download: "загрузить"
+    delete: "Удалить"
+  users:
+    profile: "Профиль"
+  citizen:
+    name: "Имя"
+    last_name: "Фамилия"
+    middle_name: "Отчетство"
+    address: "Адрес"
+    inn: "ИНН"
+    phone: "Телефон"
+  main:
+    save: "Сохранить"
+  organizations:
+    index:
+      title: "Выберете компанию"
+      create: "Добавить новую"
+      delete: "удалить"
+      edit: "редактировать"
+    new:
+      name: "Наименование"
+      inn: "ИНН"
+      address: "Адрес"
+      phone: "Телефон"
+  invoices:
+    new:
+      number: "Номер"
+      organization: "Плательщик"
+      item_name: "Наименование услуги"
+      item_count: "Кол-во"
+      item_price: "Цена услуги"
+  bank:
+    name: "Наименование банка"
+    bic: "БИК"
+    bank_order: "Кор. счет"
+    order: "Рассчетный счет"
 

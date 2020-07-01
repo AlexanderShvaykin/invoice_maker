@@ -6,3 +6,43 @@ en:
     error: "Invalid email or password"
     password_confirmation: "Password confirmation"
     register: "Register now"
+    logout: "Logout"
+  orders:
+    index: "Orders"
+    create: "Add order"
+    download: "download"
+    delete: "Delete"
+  users:
+    profile: "Profile"
+  citizen:
+    name: "Name"
+    last_name: "Last name"
+    middle_name: "Middle name"
+    address: "Address"
+    inn: "inn"
+    phone: "Phone"
+  main:
+    save: "Save"
+  organizations:
+    index:
+      title: "Choose organization"
+      create: "Add"
+      delete: "delete"
+      edit: "edit"
+    new:
+      name: "Company name"
+      inn: "Inn"
+      address: "Address"
+      phone: "Phone"
+  invoices:
+    new:
+      number: "Number"
+      organization: "Organization"
+      item_name: "Point name"
+      item_count: "Count"
+      item_price: "Item price"
+  bank:
+    name: "Bank name"
+    bic: "Bank uid"
+    bank_order: "Bank order number"
+    order: "User order"

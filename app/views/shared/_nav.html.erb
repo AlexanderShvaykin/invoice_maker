@@ -1,0 +1,11 @@
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <%= link_to t("orders.index"), invoices_path, class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to t("users.profile"), citizen_user_path(current_user), class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to t("login.logout"), logout_path, class: "nav-link" %>
+  </li>
+</ul>

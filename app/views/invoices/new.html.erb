@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-6">
+    <%= form_with(url: organization_invoices_path(@invoice.organization), model: @invoice, local: true) do |f|%>
+      <div class="form-group">
+        <%= f.text_field :organization_id, class: "form-control", hidden: true %>
+        <%= label_tag(:invoice_number, t(".number")) %>
+        <%= f.text_field :number, class: "form-control", disabled: true %>
+        <%= label_tag(:invoice_number, t(".organization")) %>
+        <%= text_field :skip, nil, value: @invoice.organization.name, class: "form-control", disabled: true %>
+        <%= label_tag(:item_name, t(".item_name")) %>
+        <%= text_field :item, :name, class: "form-control"%>
+        <%= label_tag(:item_count, t(".item_count")) %>
+        <%= number_field :item, :count, class: "form-control"%>
+        <%= label_tag(:item_price, t(".item_price")) %>
+        <%= number_field :item, :price, class: "form-control"%>
+      </div>
+      <div class="form-group">
+      </div>
+      <%= submit_tag(t("main.save"), class: "btn btn-primary") %>
+    <% end %>
+  </div>
+</div>

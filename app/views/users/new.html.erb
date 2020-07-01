@@ -5,13 +5,13 @@
 <% end %>
 
 <%= form_with(model: @user, local: true) do %>
-  <div>
+  <div class="form-group">
     <%= label_tag(:email, t("login.email")) %>
-    <%= email_field_tag(:email, "", required: true) %>
+    <%= email_field_tag(:email, "", required: true, class: "form-control") %>
   </div>
-  <div>
+  <div class="form-group">
     <%= label_tag(:password, t("login.password")) %>
-    <%= password_field_tag(:password, "", required: true) %>
+    <%= password_field_tag(:password, "", required: true, class: "form-control") %>
   </div>
-  <%= submit_tag(t("login.register")) %>
+  <%= submit_tag(t("login.register"), class: "btn btn-primary") %>
 <% end %>

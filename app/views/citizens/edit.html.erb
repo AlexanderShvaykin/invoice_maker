@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-6">
+    <%= form_with(model: @citizen, local: true) do |f|%>
+      <div class="form-group">
+        <%= label_tag(:citizen_last_name, t("citizen.last_name")) %>
+        <%= f.text_field :last_name, class: "form-control" %>
+        <%= label_tag(:citizen_name, t("citizen.name")) %>
+        <%= f.text_field :name, class: "form-control" %>
+        <%= label_tag(:citizen_middle_name, t("citizen.middle_name")) %>
+        <%= f.text_field :middle_name, class: "form-control" %>
+        <%= label_tag(:citizen_address, t("citizen.address")) %>
+        <%= f.text_field :address, class: "form-control" %>
+        <%= label_tag(:citizen_inn, t("citizen.inn")) %>
+        <%= f.text_field :inn, class: "form-control" %>
+        <%= label_tag(:citizen_phone, t("citizen.phone")) %>
+        <%= f.text_field :phone, class: "form-control" %>
+        <%= label_tag(:bank_name, t("bank.name")) %>
+        <%= text_field :bank, :name, value: @bank.name, class: "form-control" %>
+        <%= label_tag(:bank_bic, t("bank.bic")) %>
+        <%= text_field :bank, :bic, value: @bank.bic, class: "form-control" %>
+        <%= label_tag(:bank_bank_order, t("bank.bank_order")) %>
+        <%= text_field :bank, :bank_order, value: @bank.bank_order, class: "form-control" %>
+        <%= label_tag(:bank_order, t("bank.order")) %>
+        <%= text_field :bank, :order, value: @bank.order, class: "form-control" %>
+      </div>
+      <div class="form-group">
+      </div>
+      <%= submit_tag(t("main.save"), class: "btn btn-primary") %>
+    <% end %>
+  </div>
+</div>
+

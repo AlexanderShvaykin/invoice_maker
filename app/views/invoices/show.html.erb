@@ -1,0 +1,81 @@
+<div class="order mt-5">
+  <h5>
+    <%= @order_data.user_name %>
+  </h5>
+  <div>
+    <%= "Адрес: #{@order_data.user_address}" %>
+  </div>
+  <div>
+    <%= "Тел.: #{@order_data.user_phone}" %>
+  </div>
+  <div>
+    <%= "ИНН #{@order_data.user_inn}" %>
+  </div>
+
+  <div>
+    <%= "Банк получателя #{@order_data.bank.name}" %>
+  </div>
+  <div>
+    <%= "БИК #{@order_data.bank.bic} Кор/сч. #{@order_data.bank.bank_order}" %>
+  </div>
+  <div>
+    <%= "Счет #{@order_data.bank.order}" %>
+  </div>
+
+  <div class="mt-5">
+    <div>
+      <%= "Плательщик #{@order_data.name}" %>
+    </div>
+    <div>
+      <%= "ИНН #{@order_data.inn}" %>
+    </div>
+    <div>
+      <%= "Адрес: #{@order_data.address}" %>
+    </div>
+    <div>
+      <%= "Тел.: #{@order_data.phone}" %>
+    </div>
+
+    <h6 class="mx-auto mt-5 mb-1" style="width: 300px;">
+      <%= "СЧЕТ № #{@order_data.number} от #{l(@order_data.created_at.to_date)}" %>
+    </h6>
+
+    <table class="table table-bordered">
+      <thead>
+        <th scope="col">№</th>
+        <th scope="col">Наименование услуги</th>
+        <th scope="col">Кол-во</th>
+        <th scope="col">Цена</th>
+        <th scope="col">Сумма</th>
+      </thead>
+      <tbody>
+      <% @order_data.positions.each.with_index(1) do |p, i| %>
+        <tr>
+          <th scope="col"><%= i %></th>
+          <td><%= p.name %></td>
+          <td><%= p.count %></td>
+          <td><%= p.price %></td>
+          <td><%= p.sum %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <div class="mt-3">
+      <span><%= "Всего наименований #{@order_data.position_count}, на сумму #{@order_data.position_sum} руб"%></span>
+      <br>
+      <span><%= @order_data.human_sum %></span>
+      <br>
+      <span>Не облагается НДС, НДФЛ, обязательными страховыми взносами (ст. 2 Федерального закона от 27.11.2018 № 422-ФЗ).</span>
+    </div>
+
+    <div class="mt-5">
+      <span>Самозанятый гражданин    ________________ </span> <span><%= @order_data.user_signature %></span>
+    </div>
+
+
+  </div>
+</div>
+
+
+

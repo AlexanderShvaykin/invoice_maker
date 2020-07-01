@@ -15,6 +15,11 @@
         <%= msg %>
       </div>
     <% end %>
-    <%= yield %>
+    <div class="container">
+      <%- if current_user %>
+        <%= render "shared/nav" %>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

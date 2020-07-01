@@ -1,13 +1,17 @@
-<%= form_with(url: user_sessions_path, method: "post", local: true) do %>
-  <div>
-    <%= label_tag(:email, t("login.email")) %>
-    <%= email_field_tag(:email, "", required: true) %>
-  </div>
-  <div>
-    <%= label_tag(:password, t("login.password")) %>
-    <%= password_field_tag(:password, "", required: true) %>
-  </div>
-  <%= submit_tag(t("login.login")) %>
-<% end %>
+<div class="row">
+  <div class="col-6">
+    <%= form_with(url: user_sessions_path, method: "post", local: true) do %>
+      <div class="form-group">
+        <%= label_tag(:email, t("login.email")) %>
+        <%= email_field_tag(:email, "", required: true, class: "form-control") %>
+      </div>
+      <div class="form-group">
+        <%= label_tag(:password, t("login.password")) %>
+        <%= password_field_tag(:password, "", required: true, class: "form-control") %>
+      </div>
+      <%= submit_tag(t("login.login"), class: "btn btn-primary") %>
+    <% end %>
 
-<%= link_to t("login.register"), registration_path %>
+    <%= link_to t("login.register"), registration_path %>
+  </div>
+</div>
